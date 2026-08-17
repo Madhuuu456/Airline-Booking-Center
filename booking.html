@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Booking | Madhu's Airline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar"><a class="brand" href="index.html"><span class="brand-mark">✈</span>SkyRoute<span
+                class="brand-accent">Air</span></a>
+        <nav><a href="index.html">Home</a><a href="flights.html">Flights</a><a class="active" href="booking.html">My
+                Booking</a><a href="support.html">Support</a></nav>
+    </header>
+    <main class="page narrow">
+        <section class="page-title"><span class="eyebrow blue">PASSENGER DETAILS</span>
+            <h1>Complete your booking</h1>
+            <p>Enter passenger information and continue to confirmation.</p>
+        </section>
+        <div id="selectedFlight" class="selected-flight"></div>
+        <form class="form-card" onsubmit="saveBooking(event)">
+            <h2>Passenger 1</h2>
+            <div class="form-grid"><label>First name<input id="first" required
+                        placeholder="First name"></label><label>Last name<input id="last" required
+                        placeholder="Last name"></label><label>Email<input id="email" type="email" required
+                        placeholder="you@example.com"></label><label>Phone<input id="phone" required
+                        placeholder="+91 98765 43210"></label><label>Date of birth<input type="date"
+                        required></label><label>Gender<select required>
+                        <option value="">Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select></label></div>
+            <h2>Travel preferences</h2>
+            <div class="form-grid"><label>Seat<select>
+                        <option>Auto assign</option>
+                        <option>Window</option>
+                        <option>Aisle</option>
+                    </select></label><label>Meal<select>
+                        <option>Standard</option>
+                        <option>Vegetarian</option>
+                        <option>Vegan</option>
+                    </select></label></div>
+            <div class="notice">🔐 Your information is used only to process this booking in this frontend demo.</div>
+            <button class="btn btn-primary full" type="submit">Continue to confirmation →</button>
+        </form>
+    </main>
+    <footer>
+        <div class="copyright">© 2026 SkyRoute Air • Frontend demo</div>
+    </footer>
+    <script src="app.js"></script>
+    <script>loadSelectedFlight();</script>
+</body>
+
+</html>

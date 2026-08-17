@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Search Flights | Madhu Airlines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar"><a class="brand" href="index.html"><span class="brand-mark">✈</span>SkyRoute<span
+        class="brand-accent">Air</span></a>
+    <nav><a href="index.html">Home</a><a class="active" href="flights.html">Flights</a><a href="booking.html">My
+        Booking</a><a href="support.html">Support</a></nav><a class="btn btn-primary" href="booking.html">My Booking</a>
+  </header>
+  <main class="page">
+    <section class="page-title"><span class="eyebrow blue">FLIGHT SEARCH</span>
+      <h1>Choose your perfect flight</h1>
+      <p>Compare departure times, duration and fares before booking.</p>
+    </section>
+    <div>
+      <img src="dubai2.jpg" alt="image" height="350px" width="350px">
+      <img src="singg.jpg" alt="img" height="350px" width="350px">
+      <img src="japan.webp" alt="im" height="350px" width="350px">
+    </div>
+    <div class="search-bar">
+      <input id="fromF" value="Hyderabad"><span>→</span><input id="toF" value="Delhi"><input id="dateF"
+        type="date"><select>
+        <option>Economy</option>
+        <option>Premium Economy</option>
+        <option>Business</option>
+      </select><button class="btn btn-dark" onclick="filterFlights()">Search</button>
+    </div>
+    <div class="flight-layout">
+      <aside class="filters">
+        <h3>Filter flights</h3><label>Airline<select>
+            <option>All airlines</option>
+            <option>SkyRoute</option>
+            <option>IndiGo</option>
+            <option>Air India</option>
+          </select></label><label>Stops<select>
+            <option>Any stops</option>
+            <option>Non-stop</option>
+            <option>1 Stop</option>
+          </select></label><label>Sort by<select id="sort" onchange="renderFlights()">
+            <option value="price">Lowest price</option>
+            <option value="time">Earliest departure</option>
+            <option value="duration">Shortest duration</option>
+          </select></label>
+        <div class="filter-note">Prices shown include standard taxes. Final price is confirmed before payment.</div>
+      </aside>
+      <section>
+        <div class="results-top"><b id="resultCount">6 flights found</b><span>Live-style availability</span></div>
+        <div id="flightList"></div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="copyright">© 2026 SkyRoute Air • Frontend demo</div>
+  </footer>
+  <script src="app.js"></script>
+  <script>renderFlights();</script>
+</body>
+
+</html>

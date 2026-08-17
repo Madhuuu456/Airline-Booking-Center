@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhu Airlines | Flight Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html"><span class="brand-mark">✈</span><span>Madhu's <span class="brand-accent">Airline</span></span></a>
+  <nav>
+    <a class="active" href="index.html">Home</a>
+    <a href="flights.html">Flights</a>
+    <a href="booking.html">My Booking</a>
+    <a href="support.html">Support</a>
+  </nav>
+  <a class="btn btn-primary" href="flights.html">Book a Flight</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">TRAVEL SMART • FLY BETTER</span>
+    <h1>Your journey begins<br><span>above the clouds.</span></h1>
+    <p>Search hundreds of flight options, compare timings and fares, and book your next trip in minutes.</p>
+    <div class="search-card">
+      <div class="trip-tabs">
+        <button class="tab active">Round Trip</button><button class="tab">One Way</button><button class="tab">Multi-City</button>
+      </div>
+      <div class="search-grid">
+        <label>From<input id="from" placeholder="Departure city" value="Hyderabad"></label>
+        <label>To<input id="to" placeholder="Arrival city" value="Delhi"></label>
+        <label>Departure<input id="date" type="date"></label>
+        <label>Passengers<select id="passengers"><option>1 Passenger</option><option>2 Passengers</option><option>3 Passengers</option><option>4 Passengers</option></select></label>
+        <button class="btn btn-dark search-btn" onclick="searchFlights()">Search Flights</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><span class="eyebrow blue">POPULAR DESTINATIONS</span><h2>Where will you go next?</h2></div><a href="flights.html" class="text-link">Explore all flights →</a></div>
+  <div class="destination-grid">
+    <article class="destination-card" style="background-image:url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=85')"><div><b>New Delhi</b><span>From ₹4,999</span></div></article>
+    <article class="destination-card" style="background-image:url('https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=85')"><div><b>Mumbai</b><span>From ₹3,499</span></div></article>
+    <article class="destination-card" style="background-image:url('https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=900&q=85')"><div><b>Goa</b><span>From ₹2,799</span></div></article>
+    <article class="destination-card" style="background-image:url('https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=900&q=85')"><div><b>Bengaluru</b><span>From ₹3,199</span></div></article>
+  </div>
+</section>
+
+<section class="section light-section">
+  <div class="section-head"><div><span class="eyebrow blue">WHY SKYROUTE</span><h2>Everything you need to fly easy</h2></div></div>
+  <div class="madhu">
+    <h2>FOUNDER & CEO</h2>
+    <img src="madhuairline.png" alt="img" height="350px" width="350px">
+  </div>
+  <div>
+
+  </div>
+  <div class="feature-grid">
+    <div class="feature"><span>⚡</span><h3>Fast booking</h3><p>Compare timings and fares with a clean, simple booking flow.</p></div>
+    <div class="feature"><span>🔒</span><h3>Secure payments</h3><p>Your passenger and booking details stay protected.</p></div>
+    <div class="feature"><span>📍</span><h3>Live updates</h3><p>Track booking status and flight information from one place.</p></div>
+  </div>
+</section>
+</main>
+<footer><div class="footer-inner"><div><div class="brand"><span class="brand-mark">✈</span>Madhu Airlines</div><p>Your trusted digital airline booking center.</p></div><div><b>Customer</b><a href="flights.html">Search Flights</a><a href="booking.html">My Booking</a><a href="support.html">Support</a></div><div><b>Operations</b><a href="agent.html">Agent Portal</a><a href="admin.html">Admin Dashboard</a><a href="staff.html">Flight Staff</a></div></div><div class="copyright">© 2026 SkyRoute Air. Frontend demo.</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
